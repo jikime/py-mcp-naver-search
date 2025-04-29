@@ -1,5 +1,7 @@
 # Naver Search MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@jikime/py-mcp-naver-search)](https://smithery.ai/server/@jikime/py-mcp-naver-search)
+
 This MCP (Multi-platform Communication Protocol) server provides access to Naver Search APIs, allowing AI agents to search for various types of content on Naver.
 
 ## Features
@@ -11,6 +13,14 @@ This MCP (Multi-platform Communication Protocol) server provides access to Naver
 - Convert keyboard input errors (errata)
 
 ## Setup
+
+### Installing via Smithery
+
+To install Naver Search MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@jikime/py-mcp-naver-search):
+
+```bash
+npx -y @smithery/cli install @jikime/py-mcp-naver-search --client claude
+```
 
 ### Prerequisites
 
