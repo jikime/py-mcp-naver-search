@@ -47,7 +47,7 @@ NAVER_CLIENT_SECRET=your_client_secret_here
 ```
 
 You can obtain these credentials by signing up at the [Naver Developers](https://developers.naver.com/apps/#/register) portal.
-And You can check my blog [Naver Search API MCP Server](https://devway.tistory.com), too.
+And You can check my blog [Naver Search API MCP Server](https://devway.tistory.com/55), too.
 
 ## Usage
 
@@ -212,7 +212,7 @@ Post date(postdate): 20250429
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### Blog
-- [Naver Search API MCP Server Blog](https://devway.tistory.com/)
+- [Naver Search API MCP Server Blog](https://devway.tistory.com/55)
 
 ## Acknowledgements
 
