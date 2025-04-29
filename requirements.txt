@@ -1,0 +1,16 @@
+[project]
+name = "py-mcp-naver-search"
+version = "0.1.0"
+description = "Naver Search"
+authors = [
+    { name = "Anthony Kim", email = "jikime@gmail.com" },
+]
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.1.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.4.1",
+    "pydantic>=2.10.6",
+]

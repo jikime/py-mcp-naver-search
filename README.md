@@ -30,14 +30,14 @@ cd py-mcp-naver-search
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-2. Create a virtual environment and install dependencies:
+3. Create a virtual environment and install dependencies:
 ```bash
 uv venv -p 3.12
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file with your Naver API credentials:
+4. Create a `.env` file with your Naver API credentials:
 ```
 cp env.example .env
 vi .env
@@ -47,6 +47,7 @@ NAVER_CLIENT_SECRET=your_client_secret_here
 ```
 
 You can obtain these credentials by signing up at the [Naver Developers](https://developers.naver.com/apps/#/register) portal.
+And You can check my blog [Naver Search API MCP Server](https://devway.tistory.com), too.
 
 ## Usage
 
@@ -211,7 +212,7 @@ Post date(postdate): 20250429
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### Blog
-- [Naver Open AI Blog](https://devway.tistory.com/)
+- [Naver Search API MCP Server Blog](https://devway.tistory.com/)
 
 ## Acknowledgements
 
