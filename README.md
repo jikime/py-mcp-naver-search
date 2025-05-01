@@ -4,10 +4,6 @@
 
 This MCP (Multi-platform Communication Protocol) server provides access to Naver Search APIs, allowing AI agents to search for various types of content on Naver.
 
-<a href="https://glama.ai/mcp/servers/@jikime/py-mcp-naver-search">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jikime/py-mcp-naver-search/badge" alt="Naver Search MCP server" />
-</a>
-
 ## Overview
 
 - Search for blogs, news, books, images, shopping items, and more
