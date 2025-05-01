@@ -1,5 +1,9 @@
 # Naver Search MCP Server
 
+![MCP Server](https://img.shields.io/badge/MCP-Server-blue)
+![Version](https://img.shields.io/badge/version-1.1.10-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 This MCP (Multi-platform Communication Protocol) server provides access to Naver Search APIs, allowing AI agents to search for various types of content on Naver.
 
 ## Features
