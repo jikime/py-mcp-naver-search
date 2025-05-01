@@ -1,12 +1,14 @@
 # Naver Search MCP Server
 
-![MCP Server](https://img.shields.io/badge/MCP-Server-blue)
-![Version](https://img.shields.io/badge/version-1.1.10-green)
-![License](https://img.shields.io/badge/license-MIT-blue)
+[![smithery badge](https://smithery.ai/badge/@jikime/py-mcp-naver-search)](https://smithery.ai/server/@jikime/py-mcp-naver-search) ![](https://badge.mcpx.dev?type=server 'MCP Server') ![Version](https://img.shields.io/badge/version-1.1.10-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 This MCP (Multi-platform Communication Protocol) server provides access to Naver Search APIs, allowing AI agents to search for various types of content on Naver.
 
-## Features
+<a href="https://glama.ai/mcp/servers/@jikime/py-mcp-naver-search">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jikime/py-mcp-naver-search/badge" alt="Naver Search MCP server" />
+</a>
+
+## Overview
 
 - Search for blogs, news, books, images, shopping items, and more
 - Multiple search categories with pagination support
@@ -14,12 +16,23 @@ This MCP (Multi-platform Communication Protocol) server provides access to Naver
 - Check for adult content
 - Convert keyboard input errors (errata)
 
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configure MCP Settings](#configure-mcp-settings)
+- [API Reference](#api-reference)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 ## Setup
 
 ### Prerequisites
 
 - Python 3.12+
 - Naver Developer API credentials
+  - You can obtain these credentials by signing up at the [Naver Developers](https://developers.naver.com/apps/#/register) portal.
+  - And You can check my blog [Naver Search API MCP Server](https://devway.tistory.com/55), too.
 
 ### Installation
 
@@ -50,17 +63,91 @@ NAVER_CLIENT_ID=your_client_id_here
 NAVER_CLIENT_SECRET=your_client_secret_here
 ```
 
-You can obtain these credentials by signing up at the [Naver Developers](https://developers.naver.com/apps/#/register) portal.
-And You can check my blog [Naver Search API MCP Server](https://devway.tistory.com/55), too.
 
-## Usage
+#### Using Docker
 
-### Starting the Server
+1. Build the Docker image:
+```bash
+docker build -t py-mcp-naver-search .
+```
 
-To run the MCP server:
+2. Run the container:
+```bash
+docker run py-mcp-naver-search
+```
+
+#### Using Local
+
+1. Run the server:
+```bash
+mcp run server.py
+```
+
+## Configure MCP Settings
+Add the server configuration to your MCP settings file:
+
+#### Claude desktop app 
+1. To install automatically via [Smithery](https://smithery.ai/server/@jikime/py-mcp-naver-search):
 
 ```bash
-mcp dev server.py
+npx -y @smithery/cli install @jikime/py-mcp-naver-search --client claude
+```
+
+2. To install manually
+open `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+Add this to the `mcpServers` object:
+```json
+{
+  "mcpServers": {
+    "Google Toolbox": {
+      "command": "/path/to/bin/uv",
+      "args": [
+        "--directory",
+        "/path/to/py-mcp-naver-search",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}
+```
+
+#### Cursor IDE 
+open `~/.cursor/mcp.json`
+
+Add this to the `mcpServers` object:
+```json
+{
+  "mcpServers": {
+    "Google Toolbox": {
+      "command": "/path/to/bin/uv",
+      "args": [
+        "--directory",
+        "/path/to/py-mcp-naver-search",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}
+```
+
+#### for Docker
+```json
+{
+  "mcpServers": {
+    "Google Toolbox": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "py-mcp-naver-search"
+      ]
+    }
+  }
+}
 ```
 
 ### Using the Client
@@ -211,14 +298,13 @@ Post date(postdate): 20250429
 ...
 ```
 
+## Acknowledgements
+- [Naver Search API MCP Server Blog](https://devway.tistory.com/55)
+- [Naver Open API](https://developers.naver.com/docs/search/blog/)
+- [MCP Protocol](https://github.com/mcp-foundation/mcp-spec)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Blog
-- [Naver Search API MCP Server Blog](https://devway.tistory.com/55)
 
-## Acknowledgements
-
-- [Naver Open API](https://developers.naver.com/docs/search/blog/)
-- [MCP Protocol](https://github.com/mcp-foundation/mcp-spec)

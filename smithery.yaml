@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - naverClientId
+      - naverClientSecret
+    properties:
+      naverClientId:
+        type: string
+        description: Naver Client ID
+      naverClientSecret:
+        type: string
+        description: Naver Client Secret
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['server.py'],
+      env: {
+        NAVER_CLIENT_ID: config.naverClientId,
+        NAVER_CLIENT_SECRET: config.naverClientSecret,
+      }
+    })
+  exampleConfig:
+    naverClientId: your_naver_client_id_here
+    naverClientSecret: your_naver_client_secret_here
