@@ -78,6 +78,10 @@ docker run py-mcp-naver-search
 ```bash
 mcp run server.py
 ```
+2. Run the MCP Inspector
+```bash
+mcp dev server.py
+```
 
 ## Configure MCP Settings
 Add the server configuration to your MCP settings file:
@@ -271,7 +275,7 @@ Searches for web documents using the given keyword.
 
 #### Available Search Categories
 ```
-GET http://localhost:8000/available-search-categories
+GET naver://available-search-categories
 ```
 Returns a list of Naver search categories available on this MCP server.
 

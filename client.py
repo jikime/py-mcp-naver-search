@@ -45,7 +45,7 @@ async def run_search(category: str, query: str, **kwargs: Any) -> None:
 
                 # Get available search categories resource
                 try:
-                    available_categories = await session.read_resource("http://localhost:8000/available-search-categories")
+                    available_categories = await session.read_resource("naver://available-search-categories")
                     # print(f"Available categories: {available_categories}")
                 except Exception as e:
                     print(f"Warning: Could not fetch available categories: {e}")

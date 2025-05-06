@@ -141,7 +141,7 @@ class ErrorResponse(BaseModel):
 
 # --- MCP Resource 정의 ---
 @mcp.resource(
-  uri='http://localhost:8000/available-search-categories', 
+  uri='naver://available-search-categories', 
   name="available-search-categories", 
   description="Returns a list of Naver search categories available on this MCP server."
 )
